@@ -1,4 +1,6 @@
-﻿namespace Test1
+﻿using System;
+
+namespace Test1
 {
     partial class Form1
     {
@@ -36,7 +38,7 @@
             this.txtFN = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.listStudents = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -80,7 +82,7 @@
             this.txtCourse.Location = new System.Drawing.Point(150, 83);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(247, 22);
-            this.txtCourse.TabIndex = 4;
+            this.txtCourse.TabIndex = 5;
             this.txtCourse.TextChanged += new System.EventHandler(this.txtCourse_TextChanged);
             // 
             // txtFN
@@ -88,14 +90,14 @@
             this.txtFN.Location = new System.Drawing.Point(150, 53);
             this.txtFN.Name = "txtFN";
             this.txtFN.Size = new System.Drawing.Size(247, 22);
-            this.txtFN.TabIndex = 5;
+            this.txtFN.TabIndex = 4;
             this.txtFN.TextChanged += new System.EventHandler(this.txtFN_TextChanged);
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(28, 125);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(137, 23);
+            this.btnAdd.Size = new System.Drawing.Size(116, 23);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add student";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -103,29 +105,29 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(150, 125);
+            this.btnClear.Location = new System.Drawing.Point(168, 125);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(132, 23);
+            this.btnClear.Size = new System.Drawing.Size(100, 23);
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // listStudents
+            // listBox1
             // 
-            this.listStudents.FormattingEnabled = true;
-            this.listStudents.ItemHeight = 16;
-            this.listStudents.Location = new System.Drawing.Point(28, 169);
-            this.listStudents.Name = "listStudents";
-            this.listStudents.Size = new System.Drawing.Size(373, 196);
-            this.listStudents.TabIndex = 8;
-            this.listStudents.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(28, 169);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(373, 196);
+            this.listBox1.TabIndex = 8;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(265, 125);
+            this.button1.Location = new System.Drawing.Point(288, 125);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
+            this.button1.Size = new System.Drawing.Size(109, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
@@ -137,7 +139,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 397);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listStudents);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtFN);
@@ -163,7 +165,7 @@
         private System.Windows.Forms.TextBox txtFN;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.ListBox listStudents;
+        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
     }
 }

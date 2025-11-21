@@ -19,20 +19,16 @@ namespace Test1
             ValidateInputs();
         }
         
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Student newStudent = new Student(txtName.Text.Trim(), txtFN.Text.Trim(), txtCourse.Text.Trim());
             manager.AddStudent(newStudent);
             UpdateList();
-            ClearFields();
+            ClearFields();//Създава нов студент с въведените данни, добавя го към мениджъра, обновява листа и изчиства полетата
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ClearFields();
+            ClearFields();// изчиства текстовите полета
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -59,14 +55,14 @@ namespace Test1
         }
         private void UpdateList()
         {
-            listStudents.Items.Clear();// изчиства текущите елементи в листа
+            listBox1.Items.Clear();// изчиства текущите елементи в листа
 
             var allStudents = manager.GetAllStudents();// взима всички студенти от мениджъра
 
             for (int i = 0; i < allStudents.Count; i++)
             {
                 string line = $"{i + 1}. {allStudents[i].ToString()}";// форматира всеки студент с номер
-                listStudents.Items.Add(line);// добавя всеки студент в листа
+                listBox1.Items.Add(line);// добавя всеки студент в листа
             }
         }
 
@@ -79,7 +75,7 @@ namespace Test1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int selectedIndex = listStudents.SelectedIndex;// взима индекса на селектирания елемент в листа
+            int selectedIndex = listBox1.SelectedIndex;// взима индекса на селектирания елемент в листа
 
             if (selectedIndex >= 0)
             {
@@ -91,8 +87,13 @@ namespace Test1
                 MessageBox.Show("Please select a student to delete",
                     "No student selected",
                     MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    MessageBoxIcon.Warning);// показва съобщение ако няма селектиран студент
             }
+        }
+
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
